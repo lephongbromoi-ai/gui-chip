@@ -174,10 +174,63 @@
                 opacity: 1;
             }
         }
+
+        /* Mặc định ẩn trên màn hình ngang hoặc máy tính */
+        #rotate-device-notice {
+            display: none;
+        }
+
+        /* Chỉ kích hoạt khi màn hình ở chế độ DỌC (portrait) trên điện thoại */
+        @media screen and (orientation: portrait) and (max-width: 768px) {
+            #rotate-device-notice {
+                display: flex;
+                position: fixed;
+                inset: 0;
+                background: rgba(11, 12, 16, 0.95);
+                color: #ffffff;
+                z-index: 999999;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .rotate-content p {
+                font-family: 'Pattaya', sans-serif;
+                font-size: 20px;
+                margin-top: 15px;
+            }
+
+            .rotate-icon {
+                font-size: 50px;
+                animation: rotate-phone 2s infinite ease-in-out;
+            }
+        }
+
+        @keyframes rotate-phone {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-90deg);
+            }
+
+            100% {
+                transform: rotate(-90deg);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Bảng nhắc xoay màn hình -->
+    <div id="rotate-device-notice">
+        <div class="rotate-content">
+            <i class="fas fa-mobile-alt rotate-icon"></i>
+            <p>Vui lòng xoay ngang điện thoại để có trải nghiệm xem tốt nhất nhé! ❤️</p>
+        </div>
+    </div>
     <!-- Audio nhạc nền -->
     <audio id="bg-audio" loop>
         <source src="pham-dinh-thai-ngan-x-vux.mp3" type="audio/mpeg">

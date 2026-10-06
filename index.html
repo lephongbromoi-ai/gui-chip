@@ -220,70 +220,6 @@
                 transform: rotate(-90deg);
             }
         }
-
-        /* Thiết lập thanh navbar chung */
-        .custom-header {
-            background-color: #f99ec7 !important;
-            box-shadow: 0 0 2px 0 #acacac;
-            margin-bottom: 0 !important;
-            border: none !important;
-            padding: 10px 15px;
-        }
-
-        /* Căn giữa và bố cục linh hoạt theo màn hình */
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .header-logo {
-            display: inline-block;
-            max-height: 45px;
-            margin-right: 25px;
-            flex-shrink: 0;
-        }
-
-        .header-title {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.4;
-            text-align: center;
-        }
-
-        /* Khoảng cách cho phần nội dung bên dưới */
-        .content-container {
-            margin-top: 25px;
-        }
-
-        /* Giao diện dành riêng cho màn hình điện thoại (dưới 768px) */
-        @media (max-width: 768px) {
-            .header-inner {
-                flex-direction: column;
-                /* Xếp logo ở trên, chữ ở dưới để không bị chật */
-                gap: 8px;
-            }
-
-            .header-logo {
-                max-height: 38px;
-                margin-right: 0;
-                /* Bỏ lề phải trên điện thoại */
-            }
-
-            .header-title {
-                font-size: 15px;
-                /* Giảm cỡ chữ vừa vặn với màn hình nhỏ */
-                padding: 0 10px;
-            }
-
-            .content-container {
-                margin-top: 15px;
-                /* Giảm khoảng cách thừa trên mobile */
-            }
-        }
     </style>
 </head>
 
@@ -319,18 +255,7 @@
 
     <!-- header color -->
     <!-- Header đã tối ưu Responsive -->
-    <nav class="navbar navbar-default custom-header" role="navigation"
-        data-anijs="if: mouseover, do: bounceIn animated">
-        <div class="header-inner">
-            <!-- logo -->
-            <img class="header-logo" src="images/logo.png" alt="logo" title="logo">
 
-            <!-- text -->
-            <div class="header-title" style="font-family: 'Lobster', cursive">
-                Ở bên em là lời tỏ tình lâu dài nhất. Dù già hay ốm, anh vẫn sẽ sẵn sàng ở bên em!
-            </div>
-        </div>
-    </nav>
 
     <!-- Khung nội dung bên dưới -->
     <div class="container-fluid content-container">
